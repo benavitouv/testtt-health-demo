@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Testtt – בקשת טופס 17 לקופת חולים</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="brand">
+        <div class="logo">
+          <img src="logo.webp" alt="Testtt Logo" />
+        </div>
+        <div class="brand-text">
+          <p class="eyebrow">מערכת הבריאות</p>
+          <h1>בקשת טופס 17</h1>
+          <p class="subhead">
+            מלאו את הפרטים, צרפו את ההפניה הרפואית, והמערכת תעביר את בקשתכם לאישור. אם הכל תקין, תקבלו טופס 17.
+          </p>
+        </div>
+      </header>
+
+      <form
+        id="claim-form"
+        class="card"
+        autocomplete="off"
+        data-lpignore="true"
+        data-1p-ignore="true"
+        data-form-type="other"
+        data-bwignore="true"
+      >
+        <div class="field-grid">
+          <label class="field">
+            <span>שם פרטי</span>
+            <input
+              type="text"
+              name="first_name"
+              autocomplete="off"
+              data-lpignore="true"
+              data-1p-ignore="true"
+              data-form-type="other"
+              data-bwignore="true"
+              required
+              placeholder="לדוגמה: ישראל"
+            />
+          </label>
+          <label class="field">
+            <span>שם משפחה</span>
+            <input
+              type="text"
+              name="last_name"
+              autocomplete="off"
+              data-lpignore="true"
+              data-1p-ignore="true"
+              data-form-type="other"
+              data-bwignore="true"
+              required
+              placeholder="לדוגמה: ישראלי"
+            />
+          </label>
+        </div>
+
+        <label class="field">
+          <span>כתובת דוא"ל</span>
+          <input
+            type="email"
+            name="email"
+            autocomplete="off"
+            data-lpignore="true"
+            data-1p-ignore="true"
+            data-form-type="other"
+            data-bwignore="true"
+            required
+            placeholder="name@example.com"
+          />
+        </label>
+
+        <label class="field">
+          <span>בית חולים מבוקש</span>
+          <select name="hospital" required>
+            <option value="">בחר בית חולים</option>
+            <option value="sheba">מרכז רפואי שיבא – רמת גן</option>
+            <option value="rambam">מרכז רפואי רמב"ם – חיפה</option>
+            <option value="hadassah-ein-kerem">מרכז רפואי הדסה עין כרם – ירושלים</option>
+            <option value="ichilov">מרכז רפואי איכילוב – תל אביב</option>
+            <option value="soroka">מרכז רפואי סורוקה – באר שבע</option>
+            <option value="schneider">מרכז רפואי שניידר לילדים – פתח תקווה</option>
+            <option value="barzilai">מרכז רפואי ברזילי – אשקלון</option>
+            <option value="wolfson">מרכז רפואי וולפסון – חולון</option>
+            <option value="meir">מרכז רפואי מאיר – כפר סבא</option>
+            <option value="assaf-harofeh">מרכז רפואי אסף הרופא – באר יעקב</option>
+            <option value="shaare-zedek">מרכז רפואי שערי צדק – ירושלים</option>
+            <option value="poriya">מרכז רפואי פוריה – טבריה</option>
+            <option value="kaplan">מרכז רפואי קפלן – רחובות</option>
+            <option value="hadassah-har-hatzofim">מרכז רפואי הדסה הר הצופים – ירושלים</option>
+            <option value="carmel">מרכז רפואי כרמל – חיפה</option>
+            <option value="emek">מרכז רפואי עמק – עפולה</option>
+            <option value="hillel-yaffe">מרכז רפואי הלל יפה – חדרה</option>
+            <option value="bnai-zion">מרכז רפואי בני ציון – חיפה</option>
+            <option value="laniado">מרכז רפואי לניאדו – נתניה</option>
+            <option value="ziv">מרכז רפואי זיו – צפת</option>
+            <option value="rabin">מרכז רפואי רבין – פתח תקווה</option>
+            <option value="yoseftal">מרכז רפואי יוספטל – אילת</option>
+            <option value="loewenstein">מרכז שיקום לוונשטיין – רעננה</option>
+            <option value="herzfeld">מרכז רפואי הרצפלד – גדרה</option>
+            <option value="geha">מרכז בריאות הנפש גהה – פתח תקווה</option>
+            <option value="shalvata">מרכז בריאות הנפש שלוותה – הוד השרון</option>
+            <option value="rivka">מרכז שיקום גריאטרי רבקה – פתח תקווה</option>
+          </select>
+        </label>
+
+        <div class="field">
+          <span>הפניה רפואית</span>
+          <label id="drop-zone" class="drop-zone">
+            <input
+              id="claim_file"
+              name="claim_file"
+              type="file"
+              accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+              required
+            />
+            <div class="drop-content">
+              <div class="drop-icon">⇣</div>
+              <div>
+                <strong>גררו קובץ לכאן</strong>
+                <p>או לחצו לבחירה מהמחשב</p>
+              </div>
+            </div>
+            <div class="file-meta">
+              <span id="file-name">לא נבחר קובץ</span>
+              <span id="file-size">—</span>
+            </div>
+          </label>
+          <p class="hint">קבצים מותרים: PDF, JPG, PNG או Word. גודל מומלץ עד 15MB.</p>
+        </div>
+
+        <button id="submit-btn" class="submit" type="submit">
+          <span>שליחת בקשת טופס 17</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+
+        <div id="status" class="status" role="status" aria-live="polite">
+          <span class="status-check" aria-hidden="true">
+            <svg viewBox="0 0 52 52" role="presentation">
+              <circle cx="26" cy="26" r="24" fill="none" />
+              <path d="M15 27l8 8 14-16" fill="none" />
+            </svg>
+          </span>
+          <span id="status-text"></span>
+        </div>
+      </form>
+
+      <p class="footnote">
+        המסמכים נשמרים באופן מאובטח ומועברים ישירות לקופת החולים שלך.
+      </p>
+    </main>
+
+    <div id="success-modal" class="success-modal" aria-hidden="true">
+      <div class="success-card" role="dialog" aria-modal="true" aria-labelledby="success-title">
+        <div class="success-icon" aria-hidden="true">
+          <svg viewBox="0 0 120 120" role="presentation">
+            <circle cx="60" cy="60" r="54" fill="none" />
+            <path d="M36 64l16 16 32-36" fill="none" />
+          </svg>
+        </div>
+        <h2 id="success-title">הבקשה נשלחה בהצלחה</h2>
+        <p>קיבלנו את ההפניה הרפואית שלך ומעבירים אותה לאישור. אם הכל תקין, תקבל טופס 17.</p>
+        <button id="success-close" class="ghost" type="button">שליחת בקשה נוספת</button>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+    <script>
+      (() => {
+        const s = document.createElement('script');
+        s.src = 'https://wonderful.app.demo.wonderful.ai/embed/wonderful-chat.js';
+        s.onload = () => {
+          new window.WonderfulChat({
+            environment: "wonderful.api.demo.wonderful.ai",
+            agentId: "312962dc-f9c2-434d-80fc-23d895fa332c",
+
+            // Core settings
+            agentName: 'נציג קופת חולים',
+            buttonText: 'שוחח עם נציג',
+            placeholderText: 'הקלד הודעה כאן...',
+            isRTL: true,
+
+            // Main theme colors
+            primaryColor: '#c8e03a',
+            accentColor: '#a0b32e',
+            textColor: '#1e293b',
+
+            // Chat appearance
+            headerBgColor: '#c8e03a',
+            headerTextColor: '#ffffff',
+
+            // Message bubbles
+            userBubbleColor: '#c8e03a',
+            userTextColor: '#ffffff',
+            agentBubbleColor: '#ffffff',
+            agentTextColor: '#1e293b',
+
+            // Background colors
+            windowBgColor: '#f8fafc',
+            messagesBgColor: '#ffffff',
+            inputBgColor: '#ffffff',
+
+            // Status indicators
+            statusColor: '#c8e03a',
+            errorColor: '#F44336',
+
+            // Optional logo (can be removed)
+            logoUrl: 'logo.webp'
+          });
+        };
+        document.head.appendChild(s);
+      })();
+    </script>
+  </body>
+</html>
